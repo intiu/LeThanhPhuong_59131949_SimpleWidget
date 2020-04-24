@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editText, editText2, editText3;
     RadioGroup radioGroup;
     CheckBox checkBox, checkBox2, checkBox3, checkBox4, checkBox5;
-    Button btnXN;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +42,11 @@ public class MainActivity extends AppCompatActivity {
         checkBox3 = findViewById(R.id.checkBox3);
         checkBox4 = findViewById(R.id.checkBox4);
         checkBox5 = findViewById(R.id.checkBox5);
-        btnXN = findViewById(R.id.button);
+        button = findViewById(R.id.button);
     }
 
     private void addEvents() {
-        btnXN.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 show();
@@ -80,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
             mesage = mesage + checkBox5.getText() + "; ";
         }
         mesage = mesage + editText3.getText();
-        //Toast.makeText(getApplicationContext(), mesage, Toast.LENGTH_LONG).show();
         Toast toast=Toast.makeText(getApplicationContext(),mesage,Toast.LENGTH_LONG);
         View view=toast.getView();
         TextView view1 =(TextView)view.findViewById(android.R.id.message);
